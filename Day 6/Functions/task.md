@@ -20,7 +20,7 @@ Putting everything together e.g.
 #Creating the function
 def get_user_name():
     name = input("What is your name? ")
-    console.log("Hello, " + name)
+    print("Hello, " + name)
     # Inside the function
 
 #Outside the function
