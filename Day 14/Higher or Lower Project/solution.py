@@ -12,12 +12,12 @@ def format_data(account):
     return f"{account_name}, a {account_descr}, from {account_country}"
 
 
-def check_answer(a_followers, b_followers):
+def check_answer(user_guess, a_followers, b_followers):
     """Take a user's guess and the follower counts and returns if they got it right."""
     if a_followers > b_followers:
-        return guess == "a"
+        return user_guess == "a"
     else:
-        return guess == "b"
+        return user_guess == "b"
 
 
 print(logo)

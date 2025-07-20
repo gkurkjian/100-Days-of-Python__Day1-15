@@ -24,10 +24,10 @@ rand_num = random.randint(1, 10)
 ### Modules in Python
 Python allows us to put code into different files and import that code if needed. This means that we can better organise and modularise our code. 
 
-You can create a new module simply by creating a new `.py` file and then you can import variables or functions from that file just by using the `import` keyword.
+You can create a new module simply by creating a new `.py` file, and then you can import variables or functions from that file just by using the `import` keyword.
 
 ### Random Floats
-You can generate a random number between 0 (not inclusive) and 1 (inclusive) using the following code from the random module:
+You can generate a random number between 0.0 (inclusive) and 1.0 (not inclusive) using the following code from the random module:
 
 ```
 import random
@@ -55,7 +55,7 @@ So it's best represented as:
 
 `a <= random.uniform(a,b) <= b`
 
-So depending on if you want the upper bound included you will chose whether to use `random.random()` or `random.uniform()`.
+So depending on if you want the upper bound included you will choose whether to use `random.random()` or `random.uniform()`.
 
 ### PAUSE 1 - Heads or Tails
 Create a coin flip program using what you have learnt about randomisation in Python. It should randomly print "Heads" or "Tails" everytime it is run. 

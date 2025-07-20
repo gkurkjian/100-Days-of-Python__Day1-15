@@ -24,5 +24,25 @@ content:
   - Day 13
   - Day 14
   - Day 15
+  - Day 16-100
+additional_files:
+  - name: .idea/inspectionProfiles/Default.xml
+  - name: .idea/inspectionProfiles/profiles_settings.xml
+  - name: Day 1/task/task.py
+  - name: Day 1/task/solution.py
+  - name: Day 3/__init__.py
+  - name: Day 5/test
+  - name: Day 5/QuizzExcersize
+  - name: Day 5/FizzBuzzQuizExercise.py
+  - name: Day 7/task/main.py
+  - name: Day 7/task/__init__.py
+  - name: Day 7/task/solution.py
+  - name: Day 7/task/hangman_art.py
+  - name: Day 7/task/hangman_words.py
+  - name: Day 11/task/art.py
+  - name: Day 11/task/main.py
+  - name: Day 11/task/solution.py
+  - name: Day 12/Quiz.py
 mode: Study
 feedback_link: https://plugins.jetbrains.com/plugin/25212-100-days-of-code--the-complete-python-pro-bootcamp/reviews
+yaml_version: 3
