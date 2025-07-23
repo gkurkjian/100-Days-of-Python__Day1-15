@@ -6,8 +6,8 @@ student_scores = [150, 142, 185, 120, 171, 184, 149, 24, 59, 68, 199, 78, 65, 89
 #
 # ## Finding the total score in the List using For Loop
 # sum = 0
-# for score in student_scores:
-#     sum += score
+# for score in student_scores:  ## here it'll push the data in student_scores into score
+#     sum += score  ## here everytime when it iterates, it'll add the data into sum
 #
 # print(sum)
 
