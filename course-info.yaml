@@ -45,4 +45,4 @@ additional_files:
   - name: Day 12/Quiz.py
 mode: Study
 feedback_link: https://plugins.jetbrains.com/plugin/25212-100-days-of-code--the-complete-python-pro-bootcamp/reviews
-yaml_version: 3
+yaml_version: 4
