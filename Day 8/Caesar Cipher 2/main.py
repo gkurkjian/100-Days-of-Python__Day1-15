@@ -11,16 +11,20 @@ shift = int(input("Type the shift number:\n"))
 # TODO-3: Combine the 'encrypt()' and 'decrypt()' functions into one function called 'caesar()'.
 #  Use the value of the user chosen 'direction' variable to determine which functionality to use.
 
-def encrypt(original_text, shift_amount):
+def caesar(original_text, shift_amount, encode_or_decode):
     cipher_text = ""
+
+    if encode_or_decode == 'decode':
+        shift_amount *= -1
+
     for letter in original_text:
         shifted_position = alphabet.index(letter) + shift_amount
         shifted_position %= len(alphabet)
         cipher_text += alphabet[shifted_position]
-    print(f"Here is the encoded result: {cipher_text}")
+    print(f"Here is the {encode_or_decode}d result: {cipher_text}")
 
 
-encrypt(original_text=text, shift_amount=shift)
+caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
 
 
 

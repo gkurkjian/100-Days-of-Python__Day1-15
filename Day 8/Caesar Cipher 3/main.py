@@ -9,7 +9,7 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 def caesar(original_text, shift_amount, encode_or_decode):
     output_text = ""
     if encode_or_decode == "decode":
-        shift_amount *= -1
+        shift_amount *= -1  ## flip the procedure according to input 'encode' don't do anything, 'decode' do the following
 
     for letter in original_text:
         if letter not in alphabet:  ## if the symbol or character are not in the alphabet list
@@ -22,25 +22,29 @@ def caesar(original_text, shift_amount, encode_or_decode):
 
 
 # TODO-3: Can you figure out a way to restart the cipher program?
-should_continue = True
+should_continue = True  ## initiating the game to be True
 
-while should_continue:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+while should_continue:  ## while the game is True; do the following
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()  ## fetch the value of direction
 
-    ## This while loop I created to validate the input to only 'encode' or 'decode'
-    while direction not in ['encode', 'decode']:
-        print("Invalid input. Please follow the instruction.")
-        direction = input("Type again only 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+    while direction not in ['encode', 'decode']:  ## while loop through and check if direction doesn't match
+        print("Invalid input. Please follow the instruction")  ## prompt error msg
+        direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower() ## ask again until proper answer
 
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
+    text = input("Type your message:\n").lower()  ## fetch the text of wish of the user
+    shift = int(input("Type the shift number:\n"))  ## fetch the position of wish of the user
 
-    caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)
+    caesar(original_text=text, shift_amount=shift, encode_or_decode=direction)  ## pass the info to caesar function
 
-    restart = input("Type 'yes' if you want to go again. Otherwise, type 'no'.\n").lower()
-    if restart == "Yes":
-        should_continue = False
-    else:
-        print("Goodbye!")
+    ## here we're prompting the user if they wish to continue to the game to restart
+    restart = input("Type 'yes' if you want to go again. Otherwise type 'no'.").lower() ## prompt the user to continue
+    while restart not in ['yes', 'no']:  ## while loop through of the answer if is 'yes' or 'no'
+        print("Invalid input. Please follow the instruction")  ## prompt error msg
+        restart = input("Type 'yes' if you want to go again. Otherwise type 'no'.").lower() ## as again until proper answer
 
+    if restart == 'yes':  ## if 'yes' to continue
+        should_continue = True  ## keep going
+    elif restart == 'no':  ## if 'no' to continue
+        print("goodbye!")  ## goodbye msg
+        should_continue = False  ## stop the code, exit
 
