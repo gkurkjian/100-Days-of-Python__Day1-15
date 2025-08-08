@@ -16,8 +16,15 @@ def encrypt(original_text, shift_amount):
     # TODO-4: What happens if you try to shift z forwards by 9? Can you fix the code?
     for letter in original_text:
         shifted_position = alphabet.index(letter) + shift_amount
-        shifted_position = shifted_position % len(alphabet)  ##In case user want to shift from letter 'z', z = 25, shifted_position = 9
-                                                            ##25+9 = 34, 34 modulo 26 = 8. Therefore, it'll increase by 8 which is 'i'
+        shifted_position = shifted_position % len(alphabet)  ## Let's say the letter is 'z', which is at index 25
+                                                            ## If we shift it by 9 → 25 + 9 = 34
+                                                            ## But our alphabet only has 26 letters, index goes from 0 to 25
+                                                            ## So 34 goes out of range and would normally cause an error
+                                                            ## Here's where modulo comes in: 34 % 26 = 8 → meaning 26 fits into 34 once,
+                                                            ## and the leftover (the remainder) is 8
+                                                            ## That brings us back to index 8, which is the letter 'i'
+                                                            ## It's like wrapping around the alphabet when we go past 'z'
+
         #or shifted_position %= len(alphabet)
 
         cipher_text += alphabet[shifted_position]
