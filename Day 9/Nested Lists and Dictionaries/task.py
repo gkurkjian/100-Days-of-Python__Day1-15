@@ -19,7 +19,7 @@ capital = {
 ##Try to print "D" from the nested_list
 nested_list = ["A", "B", ["C", "D"]]
 
-print(nested_list[2][1])
+print(nested_list[2][1])  ## the output will be "D"
 
 ## Pause 3
 travel_log = {
@@ -36,10 +36,10 @@ travel_log = {
 ##Printout Stuttgart
 
 ##This is my way I did
-print(travel_log.get("Germany").get("cities_visited")[2])
+print(travel_log.get("Germany").get("cities_visited")[2])  ## Stuttgart
 
 ##This is Angela's way
-print(travel_log["Germany"]["cities_visited"][2])
+print(travel_log["Germany"]["cities_visited"][2])  ## Stuttgart
 
 
 # ## From the Quizz
