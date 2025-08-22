@@ -27,9 +27,11 @@ def get_age():
         print("You've typed in an invalid number. Please try again with numerical input.")
         return get_age() ## Recursively call the function until valid input is given
 
-age = get_age()
+def drive_approval(user_age):
+    if user_age >= 18:
+        print(f"You can drive at age {user_age}")
+    else:
+        print(f"You cannot drive at age {user_age}")
 
-if age > 18:
-    print(f"You can drive at age {age}")
-else:
-    print(f"You cannot drive at age {age}")
+age = get_age()
+drive_approval(age)
